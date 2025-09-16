@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangam - Digital Marketing Expert | Lead Generation & E-commerce Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img-removebg-preview.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-custom {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+
+        .btn-primary-custom {
+            background: var(--accent-color);
+            color: white;
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .stats-section {
+            background: var(--bg-light);
+            padding: 60px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .case-study-content {
+            padding: 2rem;
+        }
+
+        .case-study-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 100%;
+        }
+
+        .testimonial-stars {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #374151 100%);
+            color: white;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .btn-custom {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .process-step {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+
+        .process-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .skill-bar {
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-progress {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            height: 10px;
+            border-radius: 10px;
+            transition: width 2s ease;
+        }
+        .logo{
+            color: #b91c1c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <img src="./img.png" alt="Logo" width="40" height="40" class="me-2">
+            <span class="logo">Sangam</span> Soft Solution
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title" data-aos="fade-up">Digital Marketing Expert</h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                       Born from digital marketing roots, we craft growth journeys tailored for the modern world.
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <a href="#contact" class="btn-custom btn-primary-custom">Get Started Today</a>
+                        <a href="#portfolio" class="btn-custom btn-outline-custom">View My Work</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="floating-animation" data-aos="fade-left" data-aos-delay="600">
+                        <i class="fas fa-chart-line" style="font-size: 15rem; opacity: 0.1;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-number">500+</div>
+                        <h5>Qualified Leads Generated</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number">50+</div>
+                        <h5>Happy Clients</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number">95%</div>
+                        <h5>Client Satisfaction</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number">6+</div>
+                        <h5>Years Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section -->
+<section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <div class="d-flex flex-column gap-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-primary">“We Don’t Just Market, We Build Businesses.”</h3>
+                    <h3 class="text-primary">“Your 360° Partner for Growth.”</h3>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-3">
+                        <i class="fas fa-check-circle fa-3x text-success"></i>
+                    </div>
+                    <h5>End-to-End Business Partner</h5>
+                    <p class="text-muted">We handle everything from strategy to execution, becoming your true growth partner.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center p-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-3">
+                        <i class="fas fa-handshake fa-3x text-success"></i>
+                    </div>
+                    <h5>Expert Guidance + Hands-On Execution</h5>
+                    <p class="text-muted">Get the benefit of expert advice combined with our team's practical, hands-on work.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center p-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-3">
+                        <i class="fas fa-lightbulb fa-3x text-success"></i>
+                    </div>
+                    <h5>Innovative & Affordable Solutions</h5>
+                    <p class="text-muted">We deliver cutting-edge strategies that fit your budget and drive maximum ROI.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center p-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-line fa-3x text-success"></i>
+                    </div>
+                    <h5>Focus on Real Results</h5>
+                    <p class="text-muted">Our success is measured by your growth. We prioritize measurable, tangible outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services Section -->
+    <!-- <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Services</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Lead Generation</h4>
+                        <p>Strategic campaigns that attract and convert high-quality leads for your business. Proven methods to increase your customer base.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Facebook & Google Ads</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Landing Page Optimization</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Email Marketing Funnels</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-commerce Setup</h4>
+                        <p>Complete e-commerce solutions from product pages to payment integration. Get your online store ready to generate sales.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Store Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Product Page Design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Payment Gateway Setup</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Digital Marketing Strategy</h4>
+                        <p>Comprehensive digital marketing strategies tailored to your business goals and target audience for maximum ROI.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Market Research & Analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Campaign Planning</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Performance Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO Optimization</h4>
+                        <p>Boost your search engine rankings and organic traffic with proven SEO strategies and technical optimizations.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Keyword Research</li>
+                            <li><i class="fas fa-check text-success me-2"></i>On-Page Optimization</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Technical SEO Audit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h4>Social Media Marketing</h4>
+                        <p>Build brand awareness and engage your audience across all major social media platforms with compelling content.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Content Creation</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Paid Social Campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Website Development</h4>
+                        <p>Modern, responsive websites that convert visitors into customers. Mobile-optimized and SEO-friendly designs.</p>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Speed Optimization</li>
+                            <li><i class="fas fa-check text-success me-2"></i>CRO Implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+<section id="services" class="section-padding">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Services</h2>
+        
+        <!-- Core Services -->
+        <h3 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Core Services</h3>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Lead Generation</h4>
+                    <p>Strategic campaigns that attract and convert high-quality leads for your business, Unique campaigns, designs, and concepts 
+                       .</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Facebook & Google Ads</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Landing Page Optimization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Email Marketing Funnels</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                      <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    </div>
+                    <h4>Business Growth Consulting</h4>
+                    <p> Practical strategies, sales hacks & training sessions to increase revenue , Proven methods to increase your customer base .</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>End-to-End Business Support</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Creative Brand Building</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Strategy To Execution</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Digital Marketing Strategy</h4>
+                    <p>Comprehensive digital marketing strategies tailored to your business goals and target audience for maximum ROI.</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Market Research & Analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Campaign Planning</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Performance Tracking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>SEO Optimization</h4>
+                    <p>Boost your search engine rankings and organic traffic with proven SEO strategies and technical optimizations.</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Keyword Research</li>
+                        <li><i class="fas fa-check text-success me-2"></i>On-Page Optimization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Technical SEO Audit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h4>Social Media Marketing</h4>
+                    <p>Build brand awareness and engage your audience across all major social media platforms with compelling content.</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Content Creation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Paid Social Campaigns</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Website Development</h4>
+                    <p>Modern, responsive websites that convert visitors into customers. Mobile-optimized and SEO-friendly designs.</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Speed Optimization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>CRO Implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Packages -->
+     <!-- Pricing Packages -->
+<h3 class="text-center mb-5 mt-5" data-aos="fade-up" data-aos-delay="100">Pricing Packages</h3>
+<div class="row">
+    <!-- Regular Package -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h4>Starter Package</h4>
+            <p class="text-muted">₹8,000 / month</p>
+            <p>Perfect for small businesses starting online.</p>
+            <button class="btn btn-primary-custom btn-package mt-3" data-bs-toggle="modal" data-bs-target="#regularModal">Choose Plan</button>
+        </div>
+    </div>
+
+    <!-- Premium Package -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon" style="background: linear-gradient(135deg, #2563eb, #1e40af);">
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Growth Package</h4>
+            <p class="text-muted">20,000 / month</p>
+            <p>Best for growing businesses that want steady leads.</p>
+            <button class="btn btn-primary-custom btn-package mt-3" data-bs-toggle="modal" data-bs-target="#premiumModal">Choose Plan</button>
+        </div>
+    </div>
+
+    <!-- SuperPack Package -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon" style="background: linear-gradient(135deg, #dc2626, #b91c1c);">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h4>Eilte Package</h4>
+            <p class="text-muted">₹35,000 / month</p>
+            <p>Full-stack marketing to scale revenue & brand authority.</p>
+            <button class="btn btn-primary-custom btn-package mt-3" data-bs-toggle="modal" data-bs-target="#superpackModal">Choose Plan</button>
+        </div>
+    </div>
+</div>
+
+<!-- Regular Package Modal -->
+<div class="modal fade" id="regularModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content animate__animated animate__fadeInUp">
+      <div class="modal-header">
+        <h5 class="modal-title">Regular Package – ₹8,000 / month</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Perfect for small businesses starting online.</p>
+        <ul class="list-unstyled">
+          <li>✔ 8 Social Posts / Month</li>
+          <li>✔ Basic SEO (up to 5 pages)</li>
+          <li>✔ Monthly Performance Report</li>
+          <li>✔ Boosted Posts (₹5k–10k ad budget)</li>
+          <li>✔ 1-Month Recurring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Premium Package Modal -->
+<div class="modal fade" id="premiumModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content animate__animated animate__fadeInUp">
+      <div class="modal-header">
+        <h5 class="modal-title">Premium Package – ₹20,000 / month</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Best for growing businesses that want steady leads.</p>
+        <ul class="list-unstyled">
+          <li>✔ 16 Social Posts / Month</li>
+          <li>✔ Google Ads Setup & Management</li>
+          <li>✔ On-Page SEO + 5 Local Citations</li>
+          <li>✔ Simple 3–5 Page Website</li>
+          <li>✔ Monthly Analytics & Tweaks</li>
+          <li>✔ Google + FB Ads (₹15k–30k budget)</li>
+          <li>✔ 2–3 Months Initial Setup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SuperPack Package Modal -->
+<div class="modal fade" id="superpackModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content animate__animated animate__fadeInUp">
+      <div class="modal-header">
+        <h5 class="modal-title">SuperPack Package – ₹35,000 / month</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Full-stack marketing to scale revenue & brand authority.</p>
+        <ul class="list-unstyled">
+          <li>✔ Full Social Media Management</li>
+          <li>✔ Advanced SEO (On-Page + Off-Page)</li>
+          <li>✔ Multi-Channel Ads (Google, FB, IG)</li>
+          <li>✔ 2 Blogs / Month + Email Campaigns</li>
+          <li>✔ Custom 6–10 Page Website / E-commerce</li>
+          <li>✔ Monthly Reports + Strategy Calls</li>
+          <li>✔ Ads: Suggested ₹40k+</li>
+          <li>✔ 3–6 Months Growth Plan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Animate.css for smooth animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    </div>
+</section>
+
+
+
+    <!-- Portfolio/Case Studies Section -->
+    <section id="portfolio" class="section-padding" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Success Stories</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="case-study-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-study-content">
+                            <div class="case-study-badge">Lead Generation</div>
+                            <h4>Local Service Business Campaign</h4>
+                            <p class="text-muted mb-3">Automotive Repair Shop</p>
+                            <p>Generated 120 qualified leads in just 1 month through targeted Facebook and Google Ads campaigns, resulting in a 300% increase in monthly revenue.</p>
+                            <div class="row text-center mt-4">
+                                <div class="col-4">
+                                    <h5 class="text-primary mb-0">120</h5>
+                                    <small>Qualified Leads</small>
+                                </div>
+                                <div class="col-4">
+                                    <h5 class="text-primary mb-0">300%</h5>
+                                    <small>Revenue Increase</small>
+                                </div>
+                                <div class="col-4">
+                                    <h5 class="text-primary mb-0">30 Days</h5>
+                                    <small>Timeline</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-lg-6 mb-4">
+    <div class="case-study-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="case-study-content">
+            <div class="case-study-badge">Website Development</div>
+            <h4>Corporate Website Redesign</h4>
+            <p class="text-muted mb-3">IT Solutions Company</p>
+            <p>Developed a modern, responsive website with improved UI/UX, faster loading speed, and SEO optimization, resulting in increased client inquiries and engagement.</p>
+            <div class="row text-center mt-4">
+                <div class="col-4">
+                    <h5 class="text-primary mb-0">+75%</h5>
+                    <small>Traffic Growth</small>
+                </div>
+                <div class="col-4">
+                    <h5 class="text-primary mb-0">+60%</h5>
+                    <small>Lead Conversions</small>
+                </div>
+                <div class="col-4">
+                    <h5 class="text-primary mb-0">3 Sec</h5>
+                    <small>Avg. Load Time</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+            
+            <!-- Additional Case Studies -->
+            <div class="row mt-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="case-study-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="case-study-content">
+                            <div class="case-study-badge">SEO</div>
+                            <h5>Real Estate Agency</h5>
+                            <p>Improved search rankings for 50+ keywords, resulting in 400% increase in organic traffic and 200% more inquiries.</p>
+                            <div class="text-center mt-3">
+                                <h6 class="text-primary">400% Traffic Growth</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="case-study-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="case-study-content">
+                            <div class="case-study-badge">Social Media</div>
+                            <h5>Restaurant Chain</h5>
+                            <p>Built social media presence from zero to 10K+ followers with engaging content, increasing foot traffic by 150%.</p>
+                            <div class="text-center mt-3">
+                                <h6 class="text-primary">10K+ Followers</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="case-study-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="case-study-content">
+                            <div class="case-study-badge">Email Marketing</div>
+                            <h5>Online Course Platform</h5>
+                            <p>Developed email funnel sequence that converted 25% of subscribers into paying customers, generating ₹5L+ revenue.</p>
+                            <div class="text-center mt-3">
+                                <h6 class="text-primary">25% Conversion Rate</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+ <section id="process" class="section-padding">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Process</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="process-number">1</div>
+                    <h5>Discovery & Analysis</h5>
+                    <p>I start by understanding your business goals, target audience, and current challenges. This includes competitor analysis and market research.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="process-number">2</div>
+                    <h5>Strategy Development</h5>
+                    <p>Based on the analysis, I create a customized digital marketing strategy with clear objectives, timelines, and expected outcomes.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="process-number">3</div>
+                    <h5>Implementation</h5>
+                    <p>I execute the strategy with precision, setting up campaigns, creating content, and optimizing for maximum performance.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="process-number">4</div>
+                    <h5>Monitor & Optimize</h5>
+                    <p>Continuous monitoring and data-driven optimizations ensure your campaigns deliver the best possible results and ROI.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="500">
+                    <div class="process-number">5</div>
+                    <h5>Teaching</h5>
+                    <p> We offer hands-on training programs in Marketing, Sales, and Coding designed to help individuals and businesses stay ahead in today’s fast-changing world.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-step" data-aos="fade-left" data-aos-delay="600">
+                    <div class="process-number">6</div>
+                    <h5>Guidance</h5>
+                    <p>I continue to guide you with expert advice, mentorship, and support to help you grow and adapt to evolving trends.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                      
+
+    <!-- Skills Section -->
+    <section class="section-padding" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Expertise</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div data-aos="fade-right">
+                        <h5>Google Ads & PPC</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                        
+                        <h5>Facebook & Instagram Ads</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        
+                        <h5>SEO & Content Marketing</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div data-aos="fade-left">
+                        <h5>E-commerce Development</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                        
+                        <h5>Digital Marketing Excellence</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                        
+                        <h5>Analytics & Reporting</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">What Clients Say</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">★★★★★</div>
+                      <p>"Althaf  helped us generate quality leads within weeks — very professional and results-driven approach. Our business has grown significantly!"</p>
+        <h6>Shahabdeen</h6>
+                    <small class="text-muted">We2 Interior</small>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Website by Kesavan + Ads by Althaf worked perfectly, steady growth in traffic and sales. The ROI has been exceptional and beyond our expectations."</p>
+                    <h6>Priya Sharma</h6>
+                    <small class="text-muted">Fashion Boutique Owner</small>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Outstanding service! Kesavan built us a strong online presence, and Althaf  doubled our customer inquiries with his marketing strategies. Highly recommend!"</p>
+                    <h6>Arjun Patel</h6>
+                    <small class="text-muted">Restaurant Owner</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Testimonials -->
+        <div class="row mt-4">
+            <div class="col-lg-6 mb-4">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"The lead generation campaign by Althaf  exceeded all expectations. We went from struggling to find customers to having a waiting list. His expertise in digital marketing is unmatched."</p>
+                    <h6>Meera Reddy</h6>
+                    <small class="text-muted">Real Estate Agent</small>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Professional, reliable, and results-oriented. Kesavan’s flawless e-commerce setup combined with Althaf  ongoing marketing support has been invaluable for our business growth."</p>
+                    <h6>Vikram Singh</h6>
+                    <small class="text-muted">Online Retailer</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+   <!-- WhatsApp Contact Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding" style="background-color: #dfe6ed;">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">Contact Sangam Soft Solutions</h2>
+
+    <div class="row text-center">
+      <!-- Phone Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm p-4 h-100" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-phone fa-2x text-success mb-3"></i>
+          <h5>Call Us</h5>
+          <p class="mb-0">+91 99409 29952</p>
+        </div>
+      </div>
+
+      <!-- Email Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm p-4 h-100" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+          <h5>Email</h5>
+          <p class="mb-0">dmsangamsoftsolution@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- WhatsApp Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm p-4 h-100" data-aos="fade-up" data-aos-delay="300">
+          <i class="fab fa-whatsapp fa-2x text-success mb-3"></i>
+          <h5>WhatsApp</h5>
+          <a href="https://wa.me/919940929952?text=Hi%20sangams%20soft,%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20services." 
+             target="_blank" class="btn btn-success btn-sm">
+             Chat Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <div class="card shadow-sm">
+          <div class="card-body p-0">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.472280006237!2d76.9674585!3d11.0182844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859c0d3181551%3A0xb0ed639c75afd841!2sCode%20Infinite!5e0!3m2!1sen!2sin!4v1694512345678!5m2!1sen!2sin" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+   <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+  <h5 class="mb-3">Follow Us</h5>
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank" class="me-3 facebook"><i class="fab fa-facebook fa-2x"></i></a>
+    <a href="https://instagram.com" target="_blank" class="me-3 instagram"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://linkedin.com" target="_blank" class="me-3 linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
+    <a href="https://wa.me/919940929952" target="_blank" class="whatsapp"><i class="fab fa-whatsapp fa-2x"></i></a>
+  </div>
+</div>
+
+<style>
+.social-links a {
+  text-decoration: none;
+  transition: transform 1.3s ease;
+}
+.social-links a:hover {
+  transform: scale(1.2);
+}
+.social-links .facebook { color: #1877F2; }   /* Facebook Blue */
+.social-links .instagram { 
+  color: #E4405F;  /* Instagram pink */
+  /* If you want gradient look, use background instead */
+}
+.social-links .linkedin { color: #0A66C2; }   /* LinkedIn Blue */
+.social-links .whatsapp { color: #25D366; }   /* WhatsApp Green */
+</style>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+    <h5 class="text-white mb-3">Sangam Soft Solutions</h5>
+    <p class="text-white-50">
+        Digital Marketing Company specializing in <strong>Lead Generation</strong>, 
+        <strong>E-commerce Growth</strong>, and <strong>Strategic Marketing Solutions</strong> 
+        for businesses of all sizes.
+    </p>
+    <p class="text-white-50 mb-0">
+        Powered by <strong>Code Infinite</strong>
+    </p>
+</div>
+
+                <div class="col-lg-2 mb-4">
+                    <h6 class="text-white mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-white-50">Lead Generation</a></li>
+                        <li><a href="#services" class="text-white-50">E-commerce Setup</a></li>
+                        <li><a href="#services" class="text-white-50">SEO Optimization</a></li>
+                        <li><a href="#services" class="text-white-50">Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="text-white mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50">About</a></li>
+                        <li><a href="#portfolio" class="text-white-50">Portfolio</a></li>
+                        <li><a href="#testimonials" class="text-white-50">Testimonials</a></li>
+                        <li><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-white mb-3">Newsletter</h6>
+                    <p class="text-white-50 mb-3">Subscribe for digital marketing tips and insights</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email">
+                        <button class="btn btn-warning" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 Sangam Soft Solutions Digital Marketing. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-warning position-fixed" style="bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px; display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
+            }, 20);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let statsAnimated = false;
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsAnimated) {
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.textContent);
+                        animateCounter(stat, target);
+                    });
+                    statsAnimated = true;
+                }
+            });
+        });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Skill bars animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        let skillsAnimated = false;
+
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !skillsAnimated) {
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                    skillsAnimated = true;
+                }
+            });
+        });
+
+        const skillsSection = document.querySelector('.skill-bar');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection.parentElement);
+        }
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message (you can integrate with actual form service)
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Message Sent!';
+            button.style.background = '#10b981';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+                this.reset();
+            }, 3000);
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu close on link click
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Testimonials carousel effect (optional enhancement)
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        testimonials.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Service cards hover effect
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.service-icon');
+                icon.style.transform = 'rotate(10deg) scale(1.1)';
+                icon.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.service-icon');
+                icon.style.transform = 'rotate(0deg) scale(1)';
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('footer form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]');
+            const button = this.querySelector('button');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Subscribed!';
+            button.style.background = '#10b981';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+                email.value = '';
+            }, 2000);
+        });
+
+        // Package button handling
+        document.querySelectorAll('.btn-package').forEach(button => {
+            button.addEventListener('click', function() {
+                const packageType = this.classList.contains('btn-regular') ? 'Regular' : 
+                                  this.classList.contains('btn-premium') ? 'Premium' : 'SuperPack';
+                
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                
+                // Pre-fill the service dropdown
+                setTimeout(() => {
+                    const serviceSelect = document.querySelector('#contactForm select');
+                    if (serviceSelect) {
+                        // Add package options if they don't exist
+                        if (!serviceSelect.querySelector('option[value="regular-package"]')) {
+                            const regularOption = document.createElement('option');
+                            regularOption.value = 'regular-package';
+                            regularOption.textContent = 'Regular Package - ₹8,000/month';
+                            serviceSelect.appendChild(regularOption);
+                            
+                            const premiumOption = document.createElement('option');
+                            premiumOption.value = 'premium-package';
+                            premiumOption.textContent = 'Premium Package - ₹25,000/month';
+                            serviceSelect.appendChild(premiumOption);
+                            
+                            const superpackOption = document.createElement('option');
+                            superpackOption.value = 'superpack-package';
+                            superpackOption.textContent = 'SuperPack Package - ₹60,000/month';
+                            serviceSelect.appendChild(superpackOption);
+                        }
+                        
+                        serviceSelect.value = packageType.toLowerCase() + '-package';
+                    }
+                    
+                    // Pre-fill message
+                    const messageTextarea = document.querySelector('#contactForm textarea');
+                    if (messageTextarea) {
+                        messageTextarea.value = `Hi Kesavan, I'm interested in the ${packageType} Package. Please provide more details about the services included and let's discuss how this can help grow my business.`;
+                        messageTextarea.focus();
+                    }
+                }, 1000);
+            });
+        });
+
+        console.log('✨ Kesavan Digital Marketing Website Loaded Successfully!');
+    </script>
+
+    <style>
+        /* Additional responsive styles */
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .service-card {
+                margin-bottom: 2rem;
+            }
+            
+            .case-study-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            .contact-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            .social-links a {
+                margin: 0 0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Form styling */
+        .form-control {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+        }
+
+        .form-control:focus {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 0 0 0.2rem rgba(245, 158, 11, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Loading animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform-origin: left;
+            z-index: 9999;
+        }
+    </style>
+</body>
+</html>
